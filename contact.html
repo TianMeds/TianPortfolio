@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    
+<!-- navbar section starts  -->
+
+<nav class="navbar">
+    <a href="home.html"> <i class="fas fa-home"></i> <span>home</span> </a>
+    <a href="about.html"> <i class="fas fa-user"></i> <span>about</span> </a>
+    <a href="portfolio.html"> <i class="fas fa-briefcase"></i> <span>portfolio</span> </a>
+    <a href="contact.html"> <i class="fas fa-address-book"></i> <span>contact</span> </a>
+</nav>
+
+<!-- navbar section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact">
+
+<h1 class="heading"> contact <span>me</span> </h1>
+
+<div class="row">
+
+    <div class="info-container">
+
+        <h1>get in touch</h1>
+
+        <p>For any sort of help or inquiries, feel free to send me an email and I'll get back to you soon.</p>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-map"></i>
+                <div class="info">
+                    <h3>address :</h3>
+                    <p>Makati, Philippines - 1233</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-envelope"></i>
+                <div class="info">
+                    <h3>email :</h3>
+                    <p>medalladachris100@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="box">
+                <i class="fas fa-phone"></i>
+                <div class="info">
+                    <h3>number :</h3>
+                    <p>+639951617400</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="share">
+            <a href="https://www.facebook.com/Cmedsss" target="_blank" class="fab fa-facebook-f"> </a>
+            <a href="https://twitter.com/TianMeds" target="_blank" class="fab fa-twitter"></a>
+            <a href="https://www.instagram.com/tiaanmeds/" target="_blank" class="fab fa-instagram"></a>
+            <a href="https://github.com/TianMeds" target="_blank" class="fab fa-github"></a>
+        </div>
+
+    </div>
+
+    <form class="gform pure-form pure-form-stacked" method="POST" data-email="medalladachris100@gmail.com"
+    action="https://script.google.com/macros/s/AKfycbxXDuNioduG5Ol1HeF2yYUse0-aH5pOmyi7s-tR0NI5UlKGssxEPpOfS7NNGSGbiqswyQ/exec">
+    
+    
+        <div class="inputBox">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="number" name="number" placeholder="Your Number">
+        </div>
+
+        <div class="inputBox">
+            <input type="email" name="email" placeholder="Your Email">
+            <input type="text" name="subject" placeholder="Your Subject">
+        </div>
+
+        <textarea name="message" placeholder="Your Message" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="send message" class="btn">
+        <br> </br>
+        <div class="thankyou_message" style="display:none;background-color: #84b124;
+        border:8px solid #84b124;border-radius: 30px;width: 200px;padding-top: 5px;padding-bottom: 10px;
+        padding-left: 5px;padding-right: 5px;">
+            
+            <h1 style="color: white;text-align: center;font-size:medium;">Message Sent</h1>
+    
+    </form>
+
+</div>
+
+</section>
+
+<!-- contact section ends -->
+
+<!--Thank You Section-->
+<div class="thankyou_message" style="display:none;background:none;border:8px solid gray;border-radius: 40px;width: 400px;padding-top: 15px;padding-bottom: 40px;padding-left: 20px;padding-right: 20px;"><br><br>
+    <h1>Thanks for contacting us!</h1>
+    <h1>*******</h1>
+  </div>
+</form>
+<script data-cfasync="false" type="text/javascript">
+  
+ (function() {
+function validEmail(email) {
+  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+  return re.test(email);
+}
+
+function validateHuman(honeypot) {
+  if (honeypot) {
+    console.log("Robot Detected!");
+    return true;
+  } else {
+    console.log("Welcome Human!");
+  }
+}
+function getFormData(form) {
+  var elements = form.elements;
+
+  var fields = Object.keys(elements).filter(function(k) {
+        return (elements[k].name !== "honeypot");
+  }).map(function(k) {
+    if(elements[k].name !== undefined) {
+      return elements[k].name;
+    }else if(elements[k].length > 0){
+      return elements[k].item(0).name;
+    }
+  }).filter(function(item, pos, self) {
+    return self.indexOf(item) == pos && item;
+  });
+
+  var formData = {};
+  fields.forEach(function(name){
+    var element = elements[name];
+    formData[name] = element.value;
+    if (element.length) {
+      var data = [];
+      for (var i = 0; i < element.length; i++) {
+        var item = element.item(i);
+        if (item.checked || item.selected) {
+          data.push(item.value);
+        }
+      }
+      formData[name] = data.join(', ');
+    }
+  });
+
+  // add form-specific values into the data
+  formData.formDataNameOrder = JSON.stringify(fields);
+  formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+  formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+  console.log(formData);
+  return formData;
+}
+
+function handleFormSubmit(event) {  
+  event.preventDefault();           
+  var form = event.target;
+  var data = getFormData(form);         
+  if( data.email && !validEmail(data.email) ) {   
+    var invalidEmail = form.querySelector(".email-invalid");
+    if (invalidEmail) {
+      invalidEmail.style.display = "block";
+      return false;
+    }
+  } else {
+    disableAllButtons(form);
+    var url = form.action;
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', url);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        console.log(xhr.status, xhr.statusText);
+        console.log(xhr.responseText);
+        var formElements = form.querySelector(".form-elements")
+        if (formElements) {
+          formElements.style.display = "none"; // hide form
+        }
+        var thankYouMessage = form.querySelector(".thankyou_message");
+        if (thankYouMessage) {
+          thankYouMessage.style.display = "block";
+        }
+        return;
+    };
+    var encoded = Object.keys(data).map(function(k) {
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+    }).join('&');
+    xhr.send(encoded);
+  }
+}
+
+function loaded() {
+  console.log("Contact form submission handler loaded successfully.");
+  var forms = document.querySelectorAll("form.gform");
+  for (var i = 0; i < forms.length; i++) {
+    forms[i].addEventListener("submit", handleFormSubmit, false);
+  }
+};
+document.addEventListener("DOMContentLoaded", loaded, false);
+
+function disableAllButtons(form) {
+  var buttons = form.querySelectorAll("button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].disabled = true;
+  }
+}
+})();
+
+
+</script>
+</center>
+</body>
+</html>
+</body>
+</html>
