@@ -340,7 +340,7 @@ section {
   border-radius: .5rem;
   background: #1a1a1a;
   animation: movedown 1s linear 1;
-  animation-delay: 1s;
+  animation-delay: 2.5s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
@@ -385,7 +385,7 @@ section {
   border-left: 0.1rem solid #aaa;
   position: relative;
   animation: movedown 1s linear 1;
-  animation-delay: 1s;
+  animation-delay: 3s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
@@ -428,6 +428,10 @@ section {
 
 .portfolio {
   text-align: center;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .portfolio .box-container {
@@ -592,6 +596,10 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .contact .row .info-container {
