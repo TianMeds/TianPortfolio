@@ -9,15 +9,18 @@
   outline: none;
   border: none;
   text-transform: capitalize;
+  scroll-behavior: smooth;
 }
 
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
   width: 1rem;
+  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar-track {
@@ -60,6 +63,7 @@ section {
   font-size: 1.7rem;
   color: #fff;
   padding-left: 2rem;
+  cursor: pointer;
 }
 
 .btn i {
@@ -74,11 +78,13 @@ section {
   margin-left: 1rem;
   -webkit-transition: .2s linear;
   transition: .2s linear;
+  cursor: pointer;
 }
 
 .btn:hover i {
   margin-left: 2rem;
 }
+
 
 .navbar {
   position: fixed;
@@ -198,7 +204,7 @@ section {
   color: #fff;
   text-transform: uppercase;
   padding-bottom: 1rem;
-  width:100%; 
+  width:100%;
 }
 
 .about .row .info-container .box-container {
@@ -250,6 +256,7 @@ section {
   background: #1a1a1a;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+          
 }
 
 .about .row .count-container .box h3 {
