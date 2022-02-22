@@ -47,6 +47,10 @@ section {
   color: #fff;
   margin-bottom: 3rem;
   text-transform: uppercase;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .heading span {
@@ -145,6 +149,21 @@ section {
       -ms-flex: 1 1 42rem;
           flex: 1 1 42rem;
   text-align: center;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+  0%{
+      transform: translateY(-100px);
+      visibility: visible;
+  }
+  100%{
+      transform: translateY(0);
+      visibility: visible;
+  }
 }
 
 .home .image img {
@@ -163,6 +182,10 @@ section {
   color: #fff;
   font-size: 4rem;
   padding-bottom: .5rem;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .home .content span {
@@ -170,6 +193,10 @@ section {
   color: crimson;
   padding: .5rem 0;
   display: block;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .home .content p {
@@ -177,6 +204,10 @@ section {
   color: #aaa;
   padding: 1rem 0;
   line-height: 2;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.5s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row {
@@ -191,6 +222,10 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row .info-container {
@@ -215,6 +250,10 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
+  animation: movedown 1s linear 1;
+  animation-delay: 0.1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row .info-container .box-container .box {
@@ -228,11 +267,19 @@ section {
   color: #fff;
   padding: 1rem 0;
   font-weight: normal;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row .info-container .box-container .box h3 span {
   color: #aaa;
   font-weight: lighter;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row .count-container {
@@ -245,6 +292,10 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 2rem;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .about .row .count-container .box {
@@ -256,6 +307,10 @@ section {
   background: #1a1a1a;
   -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
           
 }
 
@@ -284,6 +339,10 @@ section {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
   border-radius: .5rem;
   background: #1a1a1a;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .skills .box-container .box:hover {
@@ -325,6 +384,10 @@ section {
   padding-bottom: 3rem;
   border-left: 0.1rem solid #aaa;
   position: relative;
+  animation: movedown 1s linear 1;
+  animation-delay: 1s;
+  visibility: hidden;
+  animation-fill-mode: forwards;
 }
 
 .education .box-container .box i {
