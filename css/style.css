@@ -340,7 +340,7 @@ section {
   border-radius: .5rem;
   background: #1a1a1a;
   animation: movedown 1s linear 1;
-  animation-delay: 2s;
+  animation-delay: 1s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
@@ -385,7 +385,7 @@ section {
   border-left: 0.1rem solid #aaa;
   position: relative;
   animation: movedown 1s linear 1;
-  animation-delay: 2.5s;
+  animation-delay: 1.5s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
@@ -429,7 +429,7 @@ section {
 .portfolio {
   text-align: center;
   animation: movedown 1s linear 1;
-  animation-delay: 0.5s;
+  animation-delay: 0.2s;
   visibility: hidden;
   animation-fill-mode: forwards;
 }
